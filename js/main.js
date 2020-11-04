@@ -11,6 +11,10 @@ var DataModel = Backbone.Model.extend({});
     },
     render: function() {
       this.$el.highcharts({
+        title: {
+          text: 'Sales from 1980 to 2000',
+          x: -20 //center
+      },
         
         xAxis: {
           categories: ['1980', '1985', '1990', ' 1995', '2000'
@@ -34,6 +38,7 @@ var DataModel = Backbone.Model.extend({});
   });
 
   var items = new DataCollection([{
+    name: 'Sales',
     data: [14000, 22000, 104000 , 87000 , 43400 ]
   }]);
 
