@@ -11,18 +11,25 @@ var DataModel = Backbone.Model.extend({});
     },
     render: function() {
       this.$el.highcharts({
+        chart: {
+          plotBorderWidth: 1
+      },
+        
         title: {
           text: 'Sales from 1980 to 2000',
           x: -20 //center
       },
         
         xAxis: {
-          categories: ['1980', '1985', '1990', ' 1995', '2000'
-          ]
+          categories: ['1980', '1985', '1990', ' 1995', '2000'],
+          
         },
+        tooltip: {
+          valuePrefix: '$',
+      },
         yAxis: {
-          title: {
-            text: 'sales'
+          title: { 
+          text: 'sales'
           },
           plotLines: [{
             value: 0,
